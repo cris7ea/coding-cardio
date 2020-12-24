@@ -28,32 +28,33 @@ For the folder "crypto-react-cardio" I implemented the following features:
 
 For the folder "crypto-node-cardio" I implemented the following features:
 
-- I make a REST API endpoint using Node.js and Express.js, which will return the exchange platform that is currently trading the cheapest price for Bitcoin `BTCUSD`.
+- I make a GraphQL API using Node.js, Express.js and Apollo Server, which will return the exchange platform that is currently trading the cheapest price for Bitcoin `BTCUSD`.
 - For now, I'm also assuming that 1 USDT = 1 USD
-
-Example API call (for 1 BTCUSD):
-
-```
-GET http://localhost:4000/exchange-routing?amount=1
-```
-
-Example API response (JSON):
-
-```
-{
-  "btcAmount": 1,
-  "bidAmount": 10000,
-  "exchange": "coinbase"
-}
-```
-
-**Note:** I am comparing all order books and compute the best execution price for the given amount of Bitcoin in query.
 
 #### Local Setup
 
 1. Install node modules `npm i`
 2. And run the app `npm start`
-3. Then visit http://localhost:4000/exchange-routing?amount=1
+3. Then visit http://localhost:4000/graphql
+4. Submit the following query
+
+```
+query cheapestExchange($amount: Float!) {
+  cheapestExchange(amount: $amount) {
+    btcAmount
+    bidAmount
+    exchange
+  }
+}
+```
+
+and query variable
+
+```
+{
+  "amount": 1
+}
+```
 
 #### API Documentation for Order Books
 
