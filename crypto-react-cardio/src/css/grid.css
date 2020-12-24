@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mobile-row {
+  display: block;
+}
+
+.row .column {
+  flex: 1 1 100%;
+  height: 2.5rem;
+}

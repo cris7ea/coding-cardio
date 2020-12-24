@@ -1,0 +1,20 @@
+/* CSS Media Queries for Tables (portrait or landscape) */
+@media (min-width: 768px) and (max-width: 1024px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .row .column {
+    flex: 1 1 50%;
+  }
+  .filters {
+    flex-direction: column;
+  }
+}
+
+/* CSS Media Queries for Desktops/Laptops  */
+@media (min-width: 1025px) {
+  .row .column {
+    flex: 0 1 33.3%;
+  }
+  .filters {
+    flex-direction: row;
+  }
+}
