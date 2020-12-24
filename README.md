@@ -28,7 +28,7 @@ For the folder "crypto-react-cardio" I implemented the following features:
 
 For the folder "crypto-node-cardio" I implemented the following features:
 
-- I make a JSON REST API endpoint using Node.js and Express.js, which will return the exchange platform that is currently trading the cheapest price for Bitcoin `BTCUSD`.
+- I make a REST API endpoint using Node.js and Express.js, which will return the exchange platform that is currently trading the cheapest price for Bitcoin `BTCUSD`.
 - For now, I'm also assuming that 1 USDT = 1 USD
 
 Example API call (for 1 BTCUSD):
@@ -37,7 +37,7 @@ Example API call (for 1 BTCUSD):
 GET http://localhost:4000/exchange-routing?amount=1
 ```
 
-Example API response:
+Example API response (JSON):
 
 ```
 {
