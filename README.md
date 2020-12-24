@@ -19,7 +19,10 @@ For the folder "crypto-react-cardio" I implemented the following features:
 - sorting by alphabetical order using the symbol/code of the currency
 - and applying a random shuffle to the list of currencies
 
-**To run the project**, install node modules `npm i` and run the app `npm start`.
+#### Local Setup
+
+1. Install node modules `npm i`
+2. And run the app `npm start`
 
 ## Crypto Node.js Cardio
 
@@ -46,7 +49,11 @@ Example API response:
 
 **Note:** I am comparing all order books and compute the best execution price for the given amount of Bitcoin in query.
 
-**To run the project**, install node modules `npm i` and run the app `npm start`. Then visit http://localhost:4000/exchange-routing?amount=1
+#### Local Setup
+
+1. Install node modules `npm i`
+2. And run the app `npm start`
+3. Then visit http://localhost:4000/exchange-routing?amount=1
 
 #### API Documentation for Order Books
 
